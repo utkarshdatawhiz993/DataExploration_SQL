@@ -79,7 +79,7 @@ ORDER BY avg_salary DESC;
 
 
 
--- Salary trending: average salary trend across years (2020, 2021. 2022, 2023, 2024)?
+-- Salary trending: average salary trend across years (2020, 2021. 2022, 2023, 2024, 2025)?
 
 select work_year, 
 	AVG(CAST(salary_in_usd as float)) as avg_salary
