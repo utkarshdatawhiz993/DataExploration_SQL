@@ -46,12 +46,14 @@ FROM salaries
 GROUP BY job_title
 ORDER BY avg_salary DESC;
 
+
 -- Which job titles are earning more than avg salary?
 
 select top 10
 	Job_title, salary_in_usd
 from salaries
 where salary_in_usd > (select avg(CAST(salary_in_usd AS FLOAT)) from salaries)
+
 
 
 -- Comparison between full-time and contract employment_type average salary among various job titles?
@@ -62,6 +64,7 @@ select top 3
 	rank() over (partition by job_title order by salary_in_usd desc) as ranking
 from salaries
 group by job_title, employment_type
+
 
 
 -- Comparison between full-time and contract employment_type average salary among various job titles
@@ -86,7 +89,7 @@ order by avg_salary desc --Amazing finding: average salary in 2024 is highler th
 
 
 
--- top 10 ranking of average salary across employee_residence(Country)?
+-- top 5 ranking of average salary across employee_residence(Country)?
 
 SELECT TOP 5  
     AVG(CAST(salary_in_usd AS FLOAT)) AS avg_salary, 
@@ -103,6 +106,7 @@ WHERE employee_residence IN ('QA', 'CD', 'VE', 'US', 'IL')
 GROUP BY employee_residence
 ORDER BY avg_salary DESC; -- Qatar shown highest average salary followed by Congo and Venezuela before United stated and Isreal
 
+
 -- Which company size paying more to its employees (small, medium, large)?
 
 select company_size,
@@ -110,7 +114,6 @@ select company_size,
 from salaries
 group by company_size
 order by avg_salary desc -- Large size company paid more than Medium and small size company
-
 
 
 -- Top 10 job title earning more in terms of average salary for senior level and Mid-Level?
