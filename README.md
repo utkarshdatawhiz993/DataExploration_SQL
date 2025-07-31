@@ -1,9 +1,9 @@
 # Data Exploration with T-SQL
 
-## Dataset
+Dataset
 <a href="https://github.com/utkarshdatawhiz993/DataExploration_SQL/blob/main/salaries.csv">Salaries</a>
 
-```Lets start```
+```Let's start```
 ```
 -- Changing the employement type abbreviation to full name of employment type 
 
