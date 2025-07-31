@@ -5,7 +5,7 @@
 
 ```Lets start```
 ```
-Changing the employement type abbreviation to full name of employment type 
+-- Changing the employement type abbreviation to full name of employment type 
 
 update salaries
 set employment_type =
@@ -17,7 +17,7 @@ set employment_type =
 	END```
 
 
-Changing abbreviation of experience level to full name 
+-- Changing abbreviation of experience level to full name 
 
 ```UPDATE salaries
 SET experience_level = 
